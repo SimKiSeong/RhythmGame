@@ -1,5 +1,6 @@
 package do_doom_chit;
 
+<<<<<<< HEAD
 /**
  * ì¸íƒˆê±°ì•¼ ê²Œìž„ì„ ë§Œë“œëŠ” í´ëž˜ìŠ¤ ì“°ëž˜ë“œë¥¼ ì´ìš©í•˜ê²Œ ë˜ëŠ”ë° ì“°ë ˆë“œëŠ” ë©”ë‰´ í™”ë©´ê³¼ ê²Œìž„í™”ë©´ ê·¸ëž˜í”½ì´ ë™ì‹œì— ì‹¤í–‰ë˜ì§€ ì•Šê¸°ë•Œë¬¸ì— ì“°ëŠ”ê²ƒìž„
  * history : ì‹¬ê¸°ì„±, 1.0 2017.11.3 ì´ˆê¸° ìž‘ì„±
@@ -42,5 +43,38 @@ public class Anziyoung extends Thread {
 				161200, 163500, 170900, 177300, 10000000 };
 
 		Game normal = new Game(introMusic, NoteTime,item);
+=======
+
+/**
+ * º¼»¡°£»çÃá±â °ÔÀÓÀ» ¸¸µå´Â Å¬·¡½º
+ * ¾²·¡µå¸¦ ÀÌ¿ëÇÏ°Ô µÇ´Âµ¥
+ * ¾²·¹µå´Â ¸Þ´º È­¸é°ú °ÔÀÓÈ­¸é ±×·¡ÇÈÀÌ µ¿½Ã¿¡ ½ÇÇàµÇÁö ¾Ê±â¶§¹®¿¡ ¾²´Â°ÍÀÓ
+ * @author ½É±â¼º
+ *
+ */
+
+public class Anziyoung extends Thread {
+	private Music introMusic = new Music("Some.mp3",true);
+	
+	
+	
+	/**
+	 * ÀÌ ¸Þ¼Òµå´Â 
+	 * ¾²·¹µå¸¦ ÀÌ¿ëÇÏ±âÀ§ÇÑ ¸Þ¼ÒµåÀÌ°í
+	 * ¾È¿¡ °¢ ¹è¿­¸¶´Ù °¢ Å°¿¡ ÇØ´çµÇ´Â ³ëÆ® ½Ã°£°ªÀ» °¡Áö°í ÀÖ´Ù
+	 * °¢ ³ëÆ® ½Ã°£°ú ÀÌ Å¬·¡½º¿¡ ¼±¾ðµÇ¾î ÀÖ´Â À½¾ÇÀ» ÀÎÀÚ·Î ÇÏ¿©
+	 * °ÔÀÓ À» È£ÃâÇÏ°Ô µÈ´Ù
+	 *
+	 */	
+	
+	public void run(){
+	int	aNoteTime[] = new int[]{10000000};
+	int	sNoteTime[] = new int[]{4500,10000000};
+	int	dNoteTime[] = new int[]{4500,10000000};
+	int	fNoteTime[] = new int[]{10000000};
+	
+	new Game(introMusic,aNoteTime,sNoteTime,dNoteTime,fNoteTime);
+	
+>>>>>>> Kong
 	}
 }

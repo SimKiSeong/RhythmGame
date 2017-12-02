@@ -1,11 +1,14 @@
 package do_doom_chit;
 
+<<<<<<< HEAD
 /**
  * 음악에 대한 정보를 가지고 있는 클래스 history : 공철규, 1.0 2017.10.17 초기 작성
  * 
  * @since 2017-10-17
  * @author 공철규
  */
+=======
+>>>>>>> Kong
 public class Track {
 	private String titleImage;
 	private String startImage;
@@ -13,6 +16,7 @@ public class Track {
 	private String startMusic;
 	private String gameMusic;
 
+<<<<<<< HEAD
 	/**
 	 * 선택된 곡의 타이틀 이미지를 가져오는 메소드
 	 * 
@@ -99,10 +103,40 @@ public class Track {
 	 * 
 	 * @param gameMusic
 	 */
+=======
+	public String getTitleImage() {
+		return titleImage;
+	}
+	public void setTitleImage(String titleImage) {
+		this.titleImage = titleImage;
+	}
+	public String getStartImage() {
+		return startImage;
+	}
+	public void setStartImage(String startImage) {
+		this.startImage = startImage;
+	}
+	public String getGameImage() {
+		return gameImage;
+	}
+	public void setGameImage(String gameImage) {
+		this.gameImage = gameImage;
+	}
+	public String getStartMusic() {
+		return startMusic;
+	}
+	public void setStartMusic(String startMusic) {
+		this.startMusic = startMusic;
+	}
+	public String getGameMusic() {
+		return gameMusic;
+	}
+>>>>>>> Kong
 	public void setGameMusic(String gameMusic) {
 		this.gameMusic = gameMusic;
 	}
 
+<<<<<<< HEAD
 	/**
 	 * 상위 클래스에 각 값을 대입해주는 메소드
 	 * 
@@ -113,6 +147,9 @@ public class Track {
 	 * @param gameMusic
 	 */
 	public Track(String titleImage, String startImage, String gameImage, String startMusic, String gameMusic) {
+=======
+	public Track(String titleImage, String startImage, String gameImage, String startMusic, String gameMusic) { // SUPER Ŭ������ ��ü�� �����Ͽ� �ش� �� ���� 
+>>>>>>> Kong
 		super();
 		this.titleImage = titleImage;
 		this.startImage = startImage;
@@ -120,5 +157,8 @@ public class Track {
 		this.startMusic = startMusic;
 		this.gameMusic = gameMusic;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> Kong
 }

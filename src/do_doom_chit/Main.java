@@ -1,5 +1,6 @@
 package do_doom_chit;
 
+<<<<<<< HEAD
 /**
  * 메인 클래스
  * 
@@ -17,6 +18,17 @@ public class Main {
 
 		new Menu();
 
+=======
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		new Initial();
+		
+		
+>>>>>>> Kong
 	}
 
 }
