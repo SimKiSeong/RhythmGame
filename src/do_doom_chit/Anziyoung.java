@@ -1,10 +1,9 @@
-package doo;
+package do_doom_chit;
 
 import java.awt.Container;
 
 /**
- * 썸탈거야 게임을 만드는 클래스 쓰래드를 이용하게 되는데 쓰레드는 메뉴 화면과 게임화면 그래픽이 동시에 실행되지 않기때문에 쓰는것임
- * history : 심기성, 1.0 2017.11.3 초기 작성
+ * 썸탈거야 게임을 만드는 클래스 
  * 
  * @since 2017-10-14
  * @date 2017.11.16

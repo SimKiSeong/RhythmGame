@@ -1,4 +1,4 @@
-package doo;
+package do_doom_chit;
 
 import java.awt.Container;
 import java.awt.Cursor;
@@ -13,8 +13,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
- * �ʱ� ȭ���� ����ϴ� Ŭ�����Դϴ�.
- * @author ��ö��
+ * 초기 화면을 담담하는 클래스입니다.
+ * @author 공철규
  */
 public class Initial extends JFrame {
 
@@ -37,13 +37,13 @@ public class Initial extends JFrame {
 	
 	public static JFrame menu;
 	/**
-	 * Ŭ���� �⺻ ������ �Դϴ�.
+	 * 클래스 기본 생성자 입니다.
 	 */
 	public Initial(){
 
 		introMusic = new Music("introMusic.mp3", true);
 		/**
-		 * ���������� ��������ִ� �޼ҵ��Դϴ�.
+		 * 시작음악을 실행시켜주는 메소드입니다.
 		 */
 		introMusic.start();		
 
@@ -66,7 +66,7 @@ public class Initial extends JFrame {
 		startButton.setFocusPainted(true);
 		startButton.addMouseListener(new MouseAdapter(){
 			/**
-			 * ���콺�� �����ϱ� ��ư�� �ö� ��� �̹����� Ŀ������� �ٲ��ִ� �޼ҵ��Դϴ�.
+			 * 마우스가 시작하기 버튼에 올라갈 경우 이미지와 커서모양을 바꿔주는 메소드입니다.
 			 */
 			@Override
 			public void mouseEntered(MouseEvent e){
@@ -74,7 +74,7 @@ public class Initial extends JFrame {
 				startButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 			}
 			/**
-			 * ���콺�� �����ϱ� ��ư���� ������ ��� ���� �̹����� Ŀ���� �ٲ��ִ� �޼ҵ��Դϴ�.
+			 * 마우스가 시작하기 버튼에서 나왔을 경우 원래 이미지와 커서로 바꿔주는 메소드입니다.
 			 */
 			public void mouseExited(MouseEvent e){
 				startButton.setIcon(startButtonImage);
@@ -82,7 +82,7 @@ public class Initial extends JFrame {
 
 			}   
 			/**
-			 * �����ϱ� ��ư Ŭ�� �� ��������� �����ϰ� �߰��ߴ� �г��� ���� �� ���ο� �г��� �ҷ��� �׷��ִ� �޼ҵ��Դϴ�. 
+			 * 시작하기 버튼 클릭 시 배경음악을 종료하고 추가했던 패널을 지운 뒤 새로운 패널을 불러와 그려주는 메소드입니다. 
 			 */
 			public void mousePressed(MouseEvent e){
 				introMusic.close();	  
@@ -102,7 +102,7 @@ public class Initial extends JFrame {
 		quitButton.setFocusPainted(false);
 		quitButton.addMouseListener(new MouseAdapter(){
 			/**
-			 * �����ϱ� ��ư�� ���콺�� �ö� ��� �̹����� Ŀ������� �ٲ��ִ� �޼ҵ��Դϴ�.
+			 * 종료하기 버튼에 마우스가 올라갈 경우 이미지와 커서모양을 바꿔주는 메소드입니다.
 			 */
 			@Override
 			public void mouseEntered(MouseEvent e){
@@ -111,14 +111,14 @@ public class Initial extends JFrame {
 
 			}
 			/**
-			 * ���콺�� �����ϱ� ��ư���� ������ ��� ���� �̹����� Ŀ���� �ٲ��ִ� �޼ҵ��Դϴ�.
+			 * 마우스가 종료하기 버튼에서 나왔을 경우 원래 이미지와 커서로 바꿔주는 메소드입니다.
 			 */
 			public void mouseExited(MouseEvent e){
 				quitButton.setIcon(quitButtonImage);
 				quitButton.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 			}
 			/**
-			 * �����ϱ� ��ư Ŭ�� �� ���α׷��� ��������ִ� �޼ҵ� �Դϴ�.
+			 * 종료하기 버튼 클릭 시 프로그램을 종료시켜주는 메소드 입니다.
 			 */
 			public void mouseClicked(MouseEvent e){
 				System.exit(0);
@@ -133,14 +133,14 @@ public class Initial extends JFrame {
 
 	}
 	/**
-	 * contentPane�� �̹����� �׷��ִ� �޼ҵ� �Դϴ�.
-	 * @author ��ö��
+	 * contentPane에 이미지를 그려주는 메소드 입니다.
+	 * @author 공철규
 	 */
 	class drawback extends JPanel{
 		
 		public void paintComponent(Graphics g){
 			/**
-			 * contentPane�� ����ȭ���� �׷��ִ� �޼ҵ� �Դϴ�.		 
+			 * contentPane에 시작화면을 그려주는 메소드 입니다.		 
 			 * @param g
 			 */
 			super.paintComponents(g);

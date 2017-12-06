@@ -1,4 +1,4 @@
-package doo;
+package do_doom_chit;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -17,13 +17,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * 게임의 기본이 되는 클래스 이 클래스를 객채로 생성하게 되면 게임을 할 수 있게 된다. history : 심기성, 1.0 2017.11.3
- * 초기 작성
+ * 게임의 기본이 되는 클래스 이 클래스를 객채로 생성하게 되면 게임을 할 수 있게 된다. 
  * 
  * @since 2017-10-14
- * @date 2017.11.16
+ * @date 2017.12.06
  * @author 심기성
- * @version 1.0
+ * @version 1.4
  *
  */
 public class Game extends JFrame {
@@ -296,7 +295,11 @@ public class Game extends JFrame {
 		
 	}
 
-	
+	/**
+	 * 노트를 만드는 메소드
+	 * 
+	 * @param key
+	 */
 	public void makeNote(int key){
 		
 		for (int j = 0; j < NoteTime[key].length; j++) {
@@ -348,7 +351,12 @@ public class Game extends JFrame {
 		
 		
 	}
-
+	
+	/**
+	 * 노트를 체크하는 메소드
+	 * 	 * 
+	 * @param key
+	 */
 	public void checkNote(int key){
 		//  노트 판정부분
 		if (press[key]) {
@@ -376,7 +384,11 @@ public class Game extends JFrame {
 		}
 	}
 	
-	
+	/**
+	 * 버프효과를 주는 메소드
+	 * 
+	 * 
+	 */
 	public void buffAction(){
 		bufmiss = false;
 		doubleScore = false;
@@ -400,6 +412,9 @@ public class Game extends JFrame {
 		}
 	}
 	
+	/**
+	 * 너프효과를 주는 메소드
+	 */
 	public void nurffAction(){
 		bufmiss = false;
 		doubleScore = false;

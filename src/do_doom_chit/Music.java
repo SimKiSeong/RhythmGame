@@ -1,4 +1,4 @@
-package doo;
+package do_doom_chit;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -7,8 +7,8 @@ import java.io.FileInputStream;
 import javazoom.jl.player.Player;
 
 /**
- *������ ��������ִ� Ŭ�����Դϴ�.
- * @author ��ö��
+ *음악을 실행시켜주는 클래스입니다.
+ * @author 공철규
  */
 public class Music extends Thread {
 
@@ -20,7 +20,7 @@ public class Music extends Thread {
 	private BufferedInputStream bis;
 
 	/**
-	 * Ŭ������ �����ڷ� ���� ������ �������ݴϴ�
+	 * 클래스의 생성자로 음악 파일을 가져와줍니다
 	 * @param name
 	 * @param isLoop
 	 */
@@ -38,7 +38,7 @@ public class Music extends Thread {
 	}
 
 	/**
-	 * ������ ��������ִ� �޼ҵ��Դϴ�.
+	 * 음악을 종료시켜주는 메소드입니다.
 	 */
 	public void close() { 
 		isLoop = false;
@@ -47,7 +47,7 @@ public class Music extends Thread {
 	}
 
 	/**
-	 * ������ �ð��� �������ִ� �޼ҵ��Դϴ�.
+	 * 음악의 시간을 가져와주는 메소드입니다.
 	 * @return
 	 */
 	public int getTime() {
@@ -59,7 +59,7 @@ public class Music extends Thread {
 	
 
 	/**
-	 * �������̵� �� �޼ҵ�� �뷡�� ��������ִ� �޼ҵ��Դϴ�.
+	 * 오버라이딩 된 메소드로 노래를 재생시켜주는 메소드입니다.
 	 */
 	public void run() { 
 		try {

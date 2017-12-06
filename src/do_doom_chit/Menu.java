@@ -1,4 +1,4 @@
-package doo;
+package do_doom_chit;
 
 import java.awt.Container;
 import java.awt.Cursor;
