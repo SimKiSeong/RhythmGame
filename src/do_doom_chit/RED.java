@@ -1,6 +1,7 @@
-package do_doom_chit;
+package doo;
 
-<<<<<<< HEAD
+import java.awt.Container;
+
 /**
  * 빨간맛 게임을 만드는 클래스 쓰래드를 이용하게 되는데 쓰레드는 메뉴 화면과 게임화면 그래픽이 동시에 실행되지 않기때문에 쓰는것임
  * history : 심기성, 1.0 2017.11.3 초기 작성
@@ -16,9 +17,11 @@ public class RED extends Thread {
 
 	int NoteTime[][];
 boolean item;
-	
+public Container contentPane;
+
 	RED(boolean item){
 		this.item = item;
+		this.contentPane = contentPane;
 	}
 
 	/**
@@ -89,38 +92,5 @@ boolean item;
 				173100, 173300, 174100, 174300, 174900, 176600, 177600, 178600, 180600, 182800, 10000000 };
 
 		Game normal = new Game(introMusic, NoteTime,item);
-=======
-
-/**
- * 트와이스 게임을 만드는 클래스
- * 쓰래드를 이용하게 되는데
- * 쓰레드는 메뉴 화면과 게임화면 그래픽이 동시에 실행되지 않기때문에 쓰는것임
- * @author 심기성
- *
- */
-
-public class RED extends Thread {
-	private Music introMusic = new Music("RED.mp3",true);
-	
-	
-	
-	/**
-	 * 이 메소드는 
-	 * 쓰레드를 이용하기위한 메소드이고
-	 * 안에 각 배열마다 각 키에 해당되는 노트 시간값을 가지고 있다
-	 * 각 노트 시간과 이 클래스에 선언되어 있는 음악을 인자로 하여
-	 * 게임 을 호출하게 된다
-	 *
-	 */	
-	
-	public void run(){
-	int	aNoteTime[] = new int[]{3900,10000000};
-	int	sNoteTime[] = new int[]{5800,9600,10000000};
-	int	dNoteTime[] = new int[]{3900,10000,10000000};
-	int	fNoteTime[] = new int[]{6000,10400,10000000};
-	
-	new Game(introMusic,aNoteTime,sNoteTime,dNoteTime,fNoteTime);
-	
->>>>>>> Kong
 	}
 }

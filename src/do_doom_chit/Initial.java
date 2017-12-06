@@ -1,4 +1,4 @@
-package do_doom_chit;
+package doo;
 
 import java.awt.Container;
 import java.awt.Cursor;
@@ -12,6 +12,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+/**
+ * ï¿½Ê±ï¿½ È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+ * @author ï¿½ï¿½Ã¶ï¿½ï¿½
+ */
 public class Initial extends JFrame {
 
 	public ImageIcon startButtonImage = new ImageIcon(Main.class.getResource("../images/startButton.png"));
@@ -29,10 +33,23 @@ public class Initial extends JFrame {
 
 	public static Image background = new ImageIcon(Main.class.getResource("../images/introBackground.jpg")).getImage();
 
+	public Container contentPane;
+	
+	public static JFrame menu;
+	/**
+	 * Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½âº» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½.
+	 */
 	public Initial(){
 
 		introMusic = new Music("introMusic.mp3", true);
+		/**
+		 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Þ¼Òµï¿½ï¿½Ô´Ï´ï¿½.
+		 */
 		introMusic.start();		
+
+		menu = this;
+		
+		contentPane = getContentPane();
 
 		setTitle("Do_Doom_Chit");
 		setSize(SCREEN_WIDTH,SCREEN_HEIGHT); 
@@ -41,6 +58,7 @@ public class Initial extends JFrame {
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
+		
 		drawback initialpanel = new drawback();
 		startButton.setBounds(830,350,400,100); 
 		startButton.setBorderPainted(false);
@@ -48,7 +66,7 @@ public class Initial extends JFrame {
 		startButton.setFocusPainted(true);
 		startButton.addMouseListener(new MouseAdapter(){
 			/**
-			 * ½ÃÀÛÇÏ±â ¹öÆ°¿¡ ¸¶¿ì½º°¡ µé¾î°¥ °æ¿ì Ä¿¼­ ¸ð¾çÀ» ¼Õ¹Ù´Ú ¸ð¾çÀ¸·Î ¹Ù²ãÁÖ´Â ¸Þ¼Òµå
+			 * ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½Ã¶ï¿½ ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½Ö´ï¿½ ï¿½Þ¼Òµï¿½ï¿½Ô´Ï´ï¿½.
 			 */
 			@Override
 			public void mouseEntered(MouseEvent e){
@@ -56,7 +74,7 @@ public class Initial extends JFrame {
 				startButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 			}
 			/**
-			 * ½ÃÀÛÇÏ±â ¹öÆ°¿¡¼­ ¸¶¿ì½º°¡ ³ª¿Ã °æ¿ì Ä¿¼­°¡ ´Ù½Ã ¿ø·¡´ë·Î µ¹¾Æ¿À°Ô ÇØÁÖ´Â ¸Þ¼Òµå
+			 * ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½Ö´ï¿½ ï¿½Þ¼Òµï¿½ï¿½Ô´Ï´ï¿½.
 			 */
 			public void mouseExited(MouseEvent e){
 				startButton.setIcon(startButtonImage);
@@ -64,15 +82,15 @@ public class Initial extends JFrame {
 
 			}   
 			/**
-			 * ½ÃÀÛÇÏ±â ¹öÆ°À» ´©¸¦ °æ¿ì introMusicÀÌ Á¾·áµÇ°í Selected MusicÀÌ Àç»ýµÇ°í ¸ÞÀÎ È­¸éÀ¸·Î ³Ñ¾î°¡µµ·Ï ÇØÁÖ´Â ¸Þ¼Òµå
+			 * ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½Æ° Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ß°ï¿½ï¿½ß´ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½Ö´ï¿½ ï¿½Þ¼Òµï¿½ï¿½Ô´Ï´ï¿½. 
 			 */
 			public void mousePressed(MouseEvent e){
 				introMusic.close();	  
 				remove(initialpanel);
 				repaint();
-		        JPanel menupanel = new Menu();
+		        JPanel menupanel = new Menu(menu);
 		        menupanel.setSize(SCREEN_WIDTH,SCREEN_HEIGHT);
-		        add(menupanel);
+		        contentPane.add(menupanel);
 		        menupanel.setVisible(true);
 		        menupanel.repaint();
 			}
@@ -84,7 +102,7 @@ public class Initial extends JFrame {
 		quitButton.setFocusPainted(false);
 		quitButton.addMouseListener(new MouseAdapter(){
 			/**
-			 * Á¾·áÇÏ±â ¹öÆ°¿¡ ¸¶¿ì½º°¡ µé¾î°¥ °æ¿ì Ä¿¼­ ¸ð¾çÀ» ¼Õ¹Ù´Ú ¸ð¾çÀ¸·Î ¹Ù²ãÁÖ´Â ¸Þ¼Òµå
+			 * ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½Ã¶ï¿½ ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½Ö´ï¿½ ï¿½Þ¼Òµï¿½ï¿½Ô´Ï´ï¿½.
 			 */
 			@Override
 			public void mouseEntered(MouseEvent e){
@@ -93,14 +111,14 @@ public class Initial extends JFrame {
 
 			}
 			/**
-			 * Á¾·áÇÏ±â ¹öÆ°¿¡¼­ ¸¶¿ì½º°¡ ³ª¿Ã °æ¿ì Ä¿¼­°¡ ´Ù½Ã ¿ø·¡´ë·Î µ¹¾Æ¿À°Ô ÇØÁÖ´Â ¸Þ¼Òµå
+			 * ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½Ö´ï¿½ ï¿½Þ¼Òµï¿½ï¿½Ô´Ï´ï¿½.
 			 */
 			public void mouseExited(MouseEvent e){
 				quitButton.setIcon(quitButtonImage);
 				quitButton.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 			}
 			/**
-			 * Á¾·áÇÏ±â ¹öÆ°À» ´©¸¦ °æ¿ì ÇÁ·Î±×·¥À» Á¾·á½ÃÄÑÁÖ´Â ¸Þ¼Òµå
+			 * ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½Æ° Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Þ¼Òµï¿½ ï¿½Ô´Ï´ï¿½.
 			 */
 			public void mouseClicked(MouseEvent e){
 				System.exit(0);
@@ -111,17 +129,20 @@ public class Initial extends JFrame {
 		initialpanel.add(startButton);
 		initialpanel.add(quitButton);
 
-		add(initialpanel);
+		contentPane.add(initialpanel);
 
 	}
 	/**
-	 * ¹è°æÈ­¸é ±×·ÁÁÖ´Â ¸Þ¼Òµå
-	 * @author °øÃ¶±Ô
+	 * contentPaneï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½Ö´ï¿½ ï¿½Þ¼Òµï¿½ ï¿½Ô´Ï´ï¿½.
+	 * @author ï¿½ï¿½Ã¶ï¿½ï¿½
 	 */
 	class drawback extends JPanel{
 		
 		public void paintComponent(Graphics g){
-			
+			/**
+			 * contentPaneï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½Ö´ï¿½ ï¿½Þ¼Òµï¿½ ï¿½Ô´Ï´ï¿½.		 
+			 * @param g
+			 */
 			super.paintComponents(g);
 
 			g.drawImage(background , 0, 0, this);
